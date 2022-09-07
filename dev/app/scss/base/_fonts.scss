@@ -1,0 +1,16 @@
+@mixin font-face($font-name, $file-name, $font-weight, $font-style) {
+	@font-face {
+		font-family: quote($font-name);
+		font-style: $font-style;
+		font-weight: $font-weight;
+		src: url("#{$fonts}"+ $file-name + ".woff2") format("woff2"),
+			url("#{$fonts}"+ $file-name + ".woff") format("woff");
+		font-display: swap;
+	}
+}
+
+@include font-face(Poppins, poppins-400, 400, normal);
+@include font-face(Poppins, poppins-500, 500, normal);
+@include font-face(Poppins, poppins-600, 600, normal);
+@include font-face(Poppins, poppins-700, 700, normal);
+@include font-face(Poppins, poppins-800, 800, normal);

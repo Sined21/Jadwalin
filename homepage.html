@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Jadwalin</title>
+	<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<button class="header__toggler" type="button">
+				<img class="lazyload svg-html" data-src="images/bars.svg" src="#" alt="Toggle button" loading="lazy">
+			</button>
+			<a class="header__logo" href="#" aria-label="Jadwalin">
+				<img class="lazyload" data-src="images/logo.svg" src="#" alt="Jadwalin" loading="lazy">
+			</a>
+			<a class="header__btn btn btn--accent btn--sm" href="#">Join Now</a>
+		</header><!-- / header -->
+		<main class="main">
+			<section class="plans">
+				<div class="container">
+					<div class="plans__head">
+						<h1 class="plans__title">Plans & Pricing</h1>
+						<div class="plans__row">
+							<div class="plans__description">
+								<p class="plans__text">Whether your time-saving automation needs are large or small, we’re here to help you scale.</p>
+							</div>
+							<ul class="plans__nav-tabs nav-tabs" role="tablist">
+								<li class="nav-tabs__item">
+									<button class="nav-tabs__btn is-active" type="button" data-tab-button="1">Monthly</button>
+								</li>
+								<li class="nav-tabs__item">
+									<button class="nav-tabs__btn" type="button" data-tab-button="2">Yearly</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div data-tab-container>
+						<div class="plans__body is-active" data-tab-content="1">
+							<div class="plans__card plans-card">
+								<h2 class="plans-card__price"><strong class="plans-card__amount">$19</strong> /month</h2>
+								<h3 class="plans-card__title">Starter</h3>
+								<p class="plans-card__text">Unleash the power of automation.</p>
+								<ul class="plans-card__list">
+									<li class="plans-card__item">Multi-step Zaps</li>
+									<li class="plans-card__item">3 Premium Apps</li>
+									<li class="plans-card__item">2 Users team</li>
+								</ul>
+								<a href="#" class="plans-card__btn btn btn--primary">Choose plan</a>
+							</div>
+							<div class="plans__card plans-card">
+								<h2 class="plans-card__price"><strong class="plans-card__amount">$54</strong> /month</h2>
+								<h3 class="plans-card__title">Professional</h3>
+								<p class="plans-card__text">Advanced tools to take your work to the next level.</p>
+								<ul class="plans-card__list">
+									<li class="plans-card__item">Multi-step Zaps</li>
+									<li class="plans-card__item">Unlimited Premium</li>
+									<li class="plans-card__item">50 Users team</li>
+									<li class="plans-card__item">Shared Workspace</li>
+								</ul>
+								<a href="#" class="plans-card__btn btn btn--primary">Choose plan</a>
+							</div>
+							<div class="plans__card plans-card plans-card--accent">
+								<span class="plans-card__badge badge badge--primary">Most popular</span>
+								<h2 class="plans-card__price"><strong class="plans-card__amount">$89</strong> /month</h2>
+								<h3 class="plans-card__title">Company</h3>
+								<p class="plans-card__text">Automation plus enterprise-grade features.</p>
+								<ul class="plans-card__list">
+									<li class="plans-card__item">Multi-step Zaps</li>
+									<li class="plans-card__item">Unlimited Premium</li>
+									<li class="plans-card__item">Unlimited Users Team</li>
+									<li class="plans-card__item">Advanced Admin</li>
+									<li class="plans-card__item">Custom Data Retention</li>
+								</ul>
+								<a href="#" class="plans-card__btn btn btn--accent">Choose plan</a>
+							</div>
+						</div>
+						<div class="plans__body" data-tab-content="2">
+							<div class="plans__card plans-card">
+								<h2 class="plans-card__price"><strong class="plans-card__amount">$19</strong> /yearly</h2>
+								<h3 class="plans-card__title">Starter</h3>
+								<p class="plans-card__text">Unleash the power of automation.</p>
+								<ul class="plans-card__list">
+									<li class="plans-card__item">Multi-step Zaps</li>
+									<li class="plans-card__item">3 Premium Apps</li>
+									<li class="plans-card__item">2 Users team</li>
+								</ul>
+								<a href="#" class="plans-card__btn btn btn--primary">Choose plan</a>
+							</div>
+							<div class="plans__card plans-card">
+								<h2 class="plans-card__price"><strong class="plans-card__amount">$54</strong> /yearly</h2>
+								<h3 class="plans-card__title">Professional</h3>
+								<p class="plans-card__text">Advanced tools to take your work to the next level.</p>
+								<ul class="plans-card__list">
+									<li class="plans-card__item">Multi-step Zaps</li>
+									<li class="plans-card__item">Unlimited Premium</li>
+									<li class="plans-card__item">50 Users team</li>
+									<li class="plans-card__item">Shared Workspace</li>
+								</ul>
+								<a href="#" class="plans-card__btn btn btn--primary">Choose plan</a>
+							</div>
+							<div class="plans__card plans-card plans-card--accent">
+								<span class="plans-card__badge badge badge--primary">Most popular</span>
+								<h2 class="plans-card__price"><strong class="plans-card__amount">$89</strong> /yearly</h2>
+								<h3 class="plans-card__title">Company</h3>
+								<p class="plans-card__text">Automation plus enterprise-grade features.</p>
+								<ul class="plans-card__list">
+									<li class="plans-card__item">Multi-step Zaps</li>
+									<li class="plans-card__item">Unlimited Premium</li>
+									<li class="plans-card__item">Unlimited Users Team</li>
+									<li class="plans-card__item">Advanced Admin</li>
+									<li class="plans-card__item">Custom Data Retention</li>
+								</ul>
+								<a href="#" class="plans-card__btn btn btn--accent">Choose plan</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div><!-- / wrapper -->
+	<script src="js/scripts.js"></script>
+</body>
+</html>

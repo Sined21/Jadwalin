@@ -1,0 +1,109 @@
+/* plans */
+.plans {
+	padding-top: 135px;
+	padding-bottom: 70px;
+
+	&__head {
+		margin-bottom: 90px;
+
+		@include media('<md') {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 25px;
+		font-size: 40px;
+		font-weight: $regular;
+		line-height: (60/40);
+		color: $primary;
+
+		@include media('<md') {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__row {
+		display: flex;
+
+		@include media('>=md') {
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		@include media('<md') {
+			flex-direction: column;
+		}
+	}
+
+	&__description {
+		max-width: 584px;
+		font-size: 18px;
+		
+		@include media('>=md') {
+			margin-right: 30px;
+		}
+
+		@include media('<md') {
+			margin-bottom: 37px;
+		}
+	}
+
+	&__text {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__nav-tabs {
+		@include media('<md') {
+			margin: 0 auto;
+		}
+	}
+
+	&__body {
+		padding: 0 45px 20px;
+		border-radius: 26px;
+		background-color: rgba($white, 0.64);
+		
+		@include media('>=md') {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		@include media('<lg') {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		@include media('<md') {
+			padding: 13px 8px 8px;
+		}
+	}
+
+	&__card {
+		opacity: 0;
+		transform: translateY(50px);
+		transition: transform 1s linear;
+
+		@include media('>=md') {
+			width: 33.333%;
+			margin-top: -26px;
+		}
+
+		@include media('<md') {
+			&:not(:first-child) {
+				margin-top: 10px;
+				
+				&.plans-card--accent {
+					margin-top: 28px;
+				}
+			}
+		}
+
+		.is-active & {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}

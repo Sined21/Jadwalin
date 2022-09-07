@@ -1,0 +1,66 @@
+// paths
+$images: '../images/';
+$fonts: '../fonts/';
+
+//typography
+$thin: 100 !default;
+$light: 300 !default;
+$regular: 400 !default;
+$medium: 500 !default;
+$semi: 600 !default;
+$bold: 700 !default;
+$ultraBold: 800 !default;
+
+$sans: sans-serif !default;
+$serif: serif !default;
+
+$font-default: Poppins, tahoma, arial, $sans;
+
+// breakpoints
+$breakpoints: (
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px
+);
+
+// colors
+$white: #fff;
+$black: #000;
+
+$text: #848199;
+
+$primary: #231D4F;
+$primary-light: #403879;
+
+$accent: #BB6BD9;
+$accent-dark: #A847CC;
+
+// z-index
+$level0: 0;
+$level1: 10;
+$level2: 20;
+$level3: 30;
+$level4: 40;
+$level5: 50;
+
+// animation
+$time-sm: 300ms;
+$time-md: 500ms;
+$time-lg: 800ms;
+$time-xl: 1100ms;
+
+$transition: all $time-sm ease;
+
+// base vars
+$body-color: $text;
+$body-bg: linear-gradient(180deg, #F5F5FA 0%, #F2DAD5 44.15%, #A1ABD6 100%);
+
+$font-family-base: $font-default;
+$font-size-base: 15px;
+$line-height-base: 1.5;
+$font-weight-base: $medium;
+
+$links-color-base: inherit;
+$headings-font-weight: $medium;

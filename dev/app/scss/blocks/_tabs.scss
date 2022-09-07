@@ -1,0 +1,27 @@
+/* tabs */
+[data-tab-container] {
+	position: relative;
+}
+
+[data-tab-content] {
+	&:not(.is-active) {
+		display: none;
+	}
+
+	&.is-active {
+		animation: 1s ease 0s 1 normal forwards open;
+	}
+}
+
+@keyframes open {
+	0% {
+		display: flex;
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		display: flex;
+		opacity: 1;
+		visibility: visible;
+	}
+}
