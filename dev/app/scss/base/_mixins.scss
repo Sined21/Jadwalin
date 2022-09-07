@@ -1,0 +1,90 @@
+// mixins
+@mixin position-side() {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@mixin autoFill($color) {
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus,
+	&:-webkit-autofill {
+		-webkit-text-fill-color: $color;
+		-webkit-box-shadow: 0 0 0 em(1000) transparent inset;
+		transition: background-color 9999s ease-in-out 0s;
+		background: transparent;
+	}
+}
+
+@mixin hover {
+	@media (hover), (min-width: 0\0), (min--moz-device-pixel-ratio: 0) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+@mixin hover-focus-active() {
+	&:hover,
+	&:focus,
+	&:active {
+		@content;
+	}
+}
+
+@mixin fullheight() {
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
+}
+
+@mixin target-ie11 {
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		@content;
+	}
+}
+
+@mixin target-edge {
+	@supports (-ms-ime-align: auto) {
+		@content;
+	}
+}
+
+@mixin target-safari {
+	@media not all and (min-resolution: .001dpcm) {
+		@content;
+	}
+}
+
+$rem-base: 10px;
+
+@function strip-unit($num) {
+	@return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $rem-base) {
+	$value: strip-unit($value) / strip-unit($base-value) * 1rem;
+
+	@if ($value == 0) {
+		$value: 0;
+	}
+	// Turn 0rem into 0
+	@return $value;
+}
+
+@function rem($values, $base-value: $rem-base) {
+	$max: length($values);
+
+	@if $max == 1 {
+		@return convert-to-rem(nth($values, 1), $base-value);
+	}
+	$remValues: ();
+
+	@for $i from 1 through $max {
+		$remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+	}
+
+	@return $remValues;
+}

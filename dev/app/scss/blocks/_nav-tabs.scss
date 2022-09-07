@@ -1,0 +1,32 @@
+/* nav-tabs */
+.nav-tabs {
+	display: inline-flex;
+	background-color: $white;
+	padding: 0;
+	margin: 0;
+	border-radius: 22px;
+
+	&__btn {
+		display: inline-block;
+		min-width: 110px;
+		padding: 13px 24px;
+		border: none;
+		border-radius: 22px;
+		font-size: 12px;
+		letter-spacing: (0.83/12)+em;
+		text-transform: uppercase;
+		background-color: transparent;
+		transition: $transition;
+
+		&:hover:not(.is-active) {
+			color: $accent;
+		}
+
+		&.is-active {
+			pointer-events: none;
+			background-color: $accent;
+			box-shadow: 0 6px 12px rgba(82, 67, 194, 0.16);
+			color: $white;
+		}
+	}
+}

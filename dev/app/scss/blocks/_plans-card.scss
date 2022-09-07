@@ -1,0 +1,105 @@
+/* plans-card */
+.plans-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding: 67px 30px 20px;
+	border-radius: 26px;
+
+	@include media('<lg') {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	@include media('<md') {
+		padding-top: 20px;
+	}
+	
+	&--accent {
+		box-shadow: 0 42px 34px rgba(82, 67, 194, 0.295755);
+		background-color: $primary;
+		color: $white;
+	}
+
+	&__badge {
+		@include media('>=md') {
+			position: absolute;
+			top: 20px;
+			right: 30px;
+		}
+
+		@include media('<md') {
+			margin: 0 auto 20px;
+		}
+	}
+
+	&__price {
+		margin-bottom: 20px;
+		font-size: 17px;
+		font-weight: $medium;
+	}
+
+	&__amount {
+		font-size: 36px;
+		font-weight: $bold;
+		line-height: (46/36);
+		color: $primary;
+	}
+
+	&__title {
+		margin-bottom: 6px;
+		font-size: 28px;
+		color: $primary;
+	}
+
+	&__amount,
+	&__title {
+		.plans-card--accent & {
+			color: inherit;
+		}
+	}
+
+	&__text {
+		margin-bottom: 14px;
+	}
+
+	&__list {
+		padding: 0;
+
+		@include media('<md') {
+			margin-bottom: 35px;
+
+			.plans-card--accent & {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__item {
+		position: relative;
+		padding-left: 30px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C19.9936 4.47982 15.5202 0.00642897 10 0Z' fill='%235243C2' fill-opacity='0.15'/%3E%3Cpath d='M15.7725 6.83334L10.0684 14.5742C9.93234 14.7547 9.72948 14.8729 9.50539 14.9024C9.2813 14.9319 9.05478 14.87 8.87671 14.7308L4.80338 11.4742C4.44393 11.1865 4.38573 10.662 4.67338 10.3025C4.96102 9.94306 5.4856 9.88486 5.84504 10.1725L9.24171 12.89L14.4309 5.84751C14.601 5.59217 14.8978 5.45099 15.2032 5.48004C15.5087 5.50909 15.7735 5.70365 15.8925 5.98649C16.0115 6.26932 15.9654 6.59466 15.7725 6.83334Z' fill='%237B72C1'/%3E%3C/svg%3E%0A");
+			background-size: contain;
+
+			.plans-card--accent & {
+				background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.1' d='M10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C19.9936 4.47982 15.5202 0.00642897 10 0Z' fill='white'/%3E%3Cpath d='M15.7724 6.83334L10.0683 14.5742C9.93221 14.7547 9.72936 14.8729 9.50527 14.9024C9.28118 14.9319 9.05465 14.87 8.87659 14.7308L4.80325 11.4742C4.44381 11.1865 4.3856 10.662 4.67325 10.3025C4.9609 9.94306 5.48547 9.88486 5.84492 10.1725L9.24159 12.89L14.4308 5.84751C14.6009 5.59217 14.8976 5.45099 15.2031 5.48004C15.5086 5.50909 15.7734 5.70365 15.8923 5.98649C16.0113 6.26932 15.9653 6.59466 15.7724 6.83334Z' fill='white'/%3E%3C/svg%3E%0A");
+			}
+		}
+
+		& + & {
+			margin-top: 10px;
+		}
+	}
+
+	&__btn {
+		margin-top: auto;
+	}
+}

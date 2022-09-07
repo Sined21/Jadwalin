@@ -1,0 +1,16 @@
+/* badges */
+.badge {
+	display: inline-block;
+	padding: 9px 17px;
+	border-radius: 13px;
+	font-size: 10px;
+	font-weight: $ultraBold;
+	line-height: 1;
+	letter-spacing: (0.83/12)+em;
+	text-transform: uppercase;
+
+	&--primary {
+		background-color: $primary-light;
+		color: $accent;
+	}
+}

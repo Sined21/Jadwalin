@@ -1,0 +1,59 @@
+/* header */
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	align-items: center;
+	padding: 28px 50px;
+
+	@include media('<lg') {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
+	@include media('<sm') {
+		grid-template-columns: auto 1fr;
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+
+	&__toggler {
+		display: inline-flex;
+		align-items: center;
+		width: 32px;
+		height: 32px;
+		padding: 3px;
+		border: none;
+		background: none;
+		color: $primary;
+		transition: color $time-sm ease;
+
+		@include hover-focus-active() {
+			color: $accent-dark;
+		}
+	}
+
+	&__logo {
+		display: inline-flex;
+		justify-self: center;
+
+		&:hover {
+			opacity: 0.65;
+		}
+
+		@include media('<sm') {
+			justify-self: flex-end;
+		}
+	}
+
+	&__btn {
+		justify-self: flex-end;
+
+		@include media('<sm') {
+			display: none;
+		}
+	}
+}
